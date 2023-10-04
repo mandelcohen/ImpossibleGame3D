@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool isKeyDown = Input.GetKeyDown(KeyCode.Escape);
+        
         transform.Translate(0, 0,speed);
     }
 }
