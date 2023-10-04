@@ -249,89 +249,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &130218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 499284}
-  - component: {fileID: 3388560}
-  - component: {fileID: 2363582}
-  m_Layer: 0
-  m_Name: BeachBall_Electric
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &499284
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130218}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.66933584, y: 0.3447889, z: -0.15476313, w: 0.63965505}
-  m_LocalPosition: {x: 1.28, y: 0.2, z: -0.37}
-  m_LocalScale: {x: 0.31879622, y: 0.3187961, z: 0.31879616}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 440394}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3388560
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130218}
-  m_Mesh: {fileID: 4300000, guid: 5a16755deab6fa645b9766cb6423351e, type: 3}
---- !u!23 &2363582
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130218}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 766c20f07e87bf54db3fb70b356add97, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &138028
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,13 +275,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138028}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.32802555, y: -0.6333253, z: -0.6417244, w: 0.2819364}
-  m_LocalPosition: {x: -0.12, y: 0.42, z: 0.01}
+  m_LocalRotation: {x: 0.10694033, y: -0.6960304, z: -0.6427858, w: 0.30154926}
+  m_LocalPosition: {x: -1.1574329, y: 0.17955862, z: 0.20507944}
   m_LocalScale: {x: 0.3462506, y: 0.34625053, z: 0.3462506}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 440394}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -123.869995, y: 90.844, z: -254.30301}
 --- !u!33 &3347776
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -776,7 +693,6 @@ Transform:
   m_LocalScale: {x: 1.6573899, y: 1.6573904, z: 1.6573904}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 499284}
   - {fileID: 409442}
   - {fileID: 439122}
   - {fileID: 473534}
