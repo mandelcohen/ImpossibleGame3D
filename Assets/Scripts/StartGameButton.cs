@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DefaultNamespace
 {
@@ -35,7 +36,7 @@ namespace DefaultNamespace
 
         public void Click()
         {
-            
+            SceneManager.LoadScene("GameScene");
         }
     }   
 }

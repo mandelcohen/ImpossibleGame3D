@@ -1,7 +1,6 @@
 
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour
 {
     public float forwardSpeed = 0.1f;
@@ -10,17 +9,16 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        {
-            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
-            Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-            if (rigidbody.velocity.y < -.1f)
-            {
-                rigidbody.AddForce(0, fallFaster, 0);
-            }
+        // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
+        Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>(); 
+        if (rigidBody.velocity.y < -.1f) 
+        { 
+            rigidBody.AddForce(0, fallFaster, 0);
         }
+        
     }
 
-    private void Update()
+    void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
