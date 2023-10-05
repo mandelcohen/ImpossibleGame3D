@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Trap : MonoBehaviour
 {
@@ -8,6 +7,5 @@ public class Trap : MonoBehaviour
     {
         Destroy(other.gameObject);
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(0);
     }
 }

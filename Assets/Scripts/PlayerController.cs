@@ -1,7 +1,6 @@
 
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,12 +19,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-            rigidbody.AddForce(0, jumpForce, 0);    
+            Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
+            rigidBody.AddForce(0, jumpForce, 0);    
         } 
         transform.Translate(0, 0,forwardSpeed);
     }
