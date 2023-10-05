@@ -2,41 +2,38 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace DefaultNamespace
+public class StartGameButton : MonoBehaviour
 {
-    public class StartGameButton : MonoBehaviour
+    private void FixedUpdate()
     {
-        private void FixedUpdate()
-        {
-            transform.Rotate(1, 1, 1);
-        }
+        transform.Rotate(1, 1, 1);
+    }
 
-        public void HoverStart()
-        {
-            transform.localScale = Vector3.one * 1.1f;
-        }
+    public void HoverStart()
+    {
+        transform.localScale = Vector3.one * 1.1f;
+    }
         
-        public void HoverEnd()
-        {
-            transform.localScale = Vector3.one;
-        }
+    public void HoverEnd()
+    {
+        transform.localScale = Vector3.one;
+    }
         
-        public void ClickStart()
-        {
-            var mr = GetComponent<MeshRenderer>();
-            mr.material.color = Color.magenta;
-            mr.material.SetColor("Color", Color.magenta);
-        }
-        public void ClickEnd()
-        {
-            var mr = GetComponent<MeshRenderer>();
-            mr.material.color = Color.white;
-            mr.material.SetColor("Color", Color.white);
-        }
+    public void ClickStart()
+    {
+        var mr = GetComponent<MeshRenderer>();
+        mr.material.color = Color.magenta;
+        mr.material.SetColor("ColorEmission", Color.magenta);
+    }
+    public void ClickEnd()
+    {
+        var mr = GetComponent<MeshRenderer>();
+        mr.material.color = Color.white;
+        mr.material.SetColor("ColorEmission", Color.white);
+    }
 
-        public void Click()
-        {
-            SceneManager.LoadScene("GameScene");
-        }
-    }   
+    public void Click()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
 }
