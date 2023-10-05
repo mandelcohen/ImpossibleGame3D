@@ -5,17 +5,17 @@ using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
-    public float forwardSpeed = 0.04f;
+    public float forwardSpeed = 0.1f;
     public float jumpForce = 5;
-    public float moreGravity = .1f;
+    public int fallFaster = -1;
 
     private void FixedUpdate()
     {
         {
             Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-            if (rigidbody.velocity.y < moreGravity)
+            if (rigidbody.velocity.y < -.1f)
             {
-                rigidbody.AddForce(0, moreGravity, 0);
+                rigidbody.AddForce(0, fallFaster, 0);
             }
         }
     }
