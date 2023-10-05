@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isTouchingGround())
         {
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     bool isTouchingGround()
     {
-        int layerMask = LayerMask.NameToLayer("Ground");
+        int layerMask = LayerMask.GetMask("Ground");
         return Physics.CheckBox(transform.position, transform.lossyScale / 1.99f, transform.rotation, layerMask);
     }
 }
