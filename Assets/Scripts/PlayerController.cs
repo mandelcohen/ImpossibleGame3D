@@ -20,13 +20,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && isTouchingGround())
+        //if (Input.GetButtonDown("Jump") && isTouchingGround())
+        
+        bool isKeyDown = Input.GetKeyDown(KeyCode.Escape);
+        
+        if (isKeyDown && isTouchingGround())
         {
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
-            rigidBody.AddForce(0, jumpForce, 0);    
+            rigidBody.AddForce(0, 300, 0);
+            rigidBody.angularVelocity = new Vector3(2, 0, 0);
         } 
-        transform.Translate(0, 0,forwardSpeed);
+        transform.Translate(0, 0,forwardSpeed, Space.World);
     }
 
     bool isTouchingGround()
