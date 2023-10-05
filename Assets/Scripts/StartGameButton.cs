@@ -6,7 +6,7 @@ namespace DefaultNamespace
     {
         public void HoverStart()
         {
-            
+            transform.localScale = Vector3.one * 1.1f;
         }
         
         public void HoverEnd()
