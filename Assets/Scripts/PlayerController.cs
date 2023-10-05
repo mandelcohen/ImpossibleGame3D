@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         {
+            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
             if (rigidbody.velocity.y < -.1f)
             {
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
+            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
             rigidBody.AddForce(0, jumpForce, 0);    
         } 
