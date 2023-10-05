@@ -1,4 +1,4 @@
-using System;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,13 +25,13 @@ namespace DefaultNamespace
         {
             var mr = GetComponent<MeshRenderer>();
             mr.material.color = Color.magenta;
-            mr.material.SetColor("EmissionColor", Color.magenta);
+            mr.material.SetColor("Color", Color.magenta);
         }
         public void ClickEnd()
         {
             var mr = GetComponent<MeshRenderer>();
             mr.material.color = Color.white;
-            mr.material.SetColor("EmissionColor", Color.white);
+            mr.material.SetColor("Color", Color.white);
         }
 
         public void Click()

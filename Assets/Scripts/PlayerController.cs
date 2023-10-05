@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -15,7 +16,6 @@ public class PlayerController : MonoBehaviour
         { 
             rigidBody.AddForce(0, fallFaster, 0);
         }
-        
     }
 
     void Update()
@@ -28,4 +28,11 @@ public class PlayerController : MonoBehaviour
         } 
         transform.Translate(0, 0,forwardSpeed);
     }
+
+    bool isTouchingGround()
+    {
+        int layerMask = LayerMask.NameToLayer("Ground");
+        return Physics.CheckBox(transform.position, transform.lossyScale / 1.99f, transform.rotation, layerMask);
+    }
 }
+
