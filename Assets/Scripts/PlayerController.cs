@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0.04f;
+    public float forwardSpeed = 0.04f;
+    public float jumpForce = 5;
     
     // Start is called before the first frame update
     void Start()
@@ -15,8 +16,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool isKeyDown = Input.GetKeyDown(KeyCode.Escape);
+        transform.Translate(0, 0,forwardSpeed);
         
-        transform.Translate(0, 0,speed);
+        bool isKeyDown = Input.GetKeyDown(KeyCode.Space);
+        
+        if (isKeyDown)// && Can player jump) 
+        {
+            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
+            Rigidbody rigidbody =  GetComponent<Rigidbody>();
+            rigidbody.AddForce(0, jumpForce, 0, ForceMode.Impulse);    
+        } 
     }
 }
