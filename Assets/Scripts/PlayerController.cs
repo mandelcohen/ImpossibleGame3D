@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            Rigidbody rigidbody =  GetComponent<Rigidbody>();
+            Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
             rigidbody.AddForce(0, jumpForce, 0);    
         } 
         transform.Translate(0, 0,forwardSpeed);
