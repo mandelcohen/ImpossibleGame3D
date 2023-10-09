@@ -23,7 +23,7 @@ public class StartGameButton : MonoBehaviour
     {
         var mr = GetComponent<MeshRenderer>();
         mr.material.color = Color.magenta;
-        mr.material.SetColor("ColorEmission", Color.magenta);
+        mr.material.SetColor("Color", Color.magenta);
     }
     public void ClickEnd()
     {

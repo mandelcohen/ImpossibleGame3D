@@ -5,18 +5,19 @@ public class PlayerController : MonoBehaviour
 {
     public float forwardSpeed = 0.1f;
     public float jumpForce = 5;
-    public float jumpMovement = -.1f;
+    public float fallTolerance = -.1f;
     public int fallGravity = -1;
     public float jumpSpin = 2;
 
     private void FixedUpdate()
     {
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>(); 
-        if (rigidBody.velocity.y < jumpMovement) 
+        if (rigidBody.velocity.y < fallTolerance) 
         { 
             rigidBody.AddForce(0, fallGravity, 0);
         }
-        rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, forwardSpeed)
+
+        rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, forwardSpeed);
     } 
 
     void Update()
