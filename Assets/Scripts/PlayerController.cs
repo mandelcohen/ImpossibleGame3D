@@ -1,5 +1,4 @@
 
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,7 +9,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>(); 
         if (rigidBody.velocity.y < -.1f) 
         { 
@@ -22,12 +20,20 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && IsTouchingGround())
         {
-            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
+            Jump(); 
+        }
+        transform.Translate(0, 0,forwardSpeed, Space.World);
+    }
+   
+
+    private void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && IsTouchingGround())
+        {
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
             rigidBody.AddForce(0, jumpForce, 0);
             rigidBody.angularVelocity = new Vector3(2, 0, 0);
-        } 
-        transform.Translate(0, 0,forwardSpeed, Space.World);
+        }
     }
 
     bool IsTouchingGround()
