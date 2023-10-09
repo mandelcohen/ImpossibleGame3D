@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
         { 
             rigidBody.AddForce(0, fallGravity, 0);
         }
-    }
+        rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, forwardSpeed)
+    } 
 
     void Update()
     {
@@ -24,7 +25,6 @@ public class PlayerController : MonoBehaviour
         {
             Jump(); 
         }
-        transform.Translate(0, 0,forwardSpeed * Time.deltaTime, Space.World);
     }
    
 
