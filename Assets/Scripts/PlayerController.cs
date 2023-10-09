@@ -5,14 +5,16 @@ public class PlayerController : MonoBehaviour
 {
     public float forwardSpeed = 0.1f;
     public float jumpForce = 5;
-    public int fallFaster = -1;
+    public float jumpMovement = -.1f;
+    public int fallGravity = -1;
+    public float jumpSpin = 2;
 
     private void FixedUpdate()
     {
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>(); 
-        if (rigidBody.velocity.y < -.1f) 
+        if (rigidBody.velocity.y < jumpMovement) 
         { 
-            rigidBody.AddForce(0, fallFaster, 0);
+            rigidBody.AddForce(0, fallGravity, 0);
         }
     }
 
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour
         {
             Jump(); 
         }
-        transform.Translate(0, 0,forwardSpeed, Space.World);
+        transform.Translate(0, 0,forwardSpeed * Time.deltaTime, Space.World);
     }
    
 
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
             rigidBody.AddForce(0, jumpForce, 0);
-            rigidBody.angularVelocity = new Vector3(2, 0, 0);
+            rigidBody.angularVelocity = new Vector3(jumpSpin, 0, 0);
         }
     }
 
