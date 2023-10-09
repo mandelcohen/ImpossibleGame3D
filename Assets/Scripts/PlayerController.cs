@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>(); 
         if (rigidBody.velocity.y < fallTolerance) 
         { 
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && IsTouchingGround())
         {
+            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
             rigidBody.AddForce(0, jumpForce, 0);
             rigidBody.angularVelocity = new Vector3(jumpSpin, 0, 0);
